@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Form input validation excercise
 
 This checks if all forms are filled and are not filled with spaces
 
