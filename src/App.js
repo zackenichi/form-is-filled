@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import AnswerField from './AnswerField';
 import './App.css';
 import FormSubmitted from './FormSubmitted';
+import debounce from 'lodash.debounce';
 
 const App = () => {
   const [form, setForm] = useState([]);
@@ -38,6 +39,8 @@ const App = () => {
     // console.log(event.target.value);
     // console.log(index);
 
+    // edit -- added debounced
+
     const inputTxt = event.target.value;
 
     const formCopy = [...form];
@@ -61,6 +64,8 @@ const App = () => {
       setFormComplete(true);
     }
   };
+
+  const debouncedInput = debounce(handleTaskInput, 300);
 
   const handleSubmit = () => {
     setSubmitted(true);
@@ -100,7 +105,7 @@ const App = () => {
                   <AnswerField
                     question={question}
                     index={index}
-                    handleTaskInput={handleTaskInput}
+                    handleTaskInput={debouncedInput}
                   />
                 </Grid>
               );
