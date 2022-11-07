@@ -1,6 +1,6 @@
 # Form input validation excercise
 
-This checks if all forms are filled and are not filled with spaces
+This checks if all forms fields are filled out and are not filled with spaces
 
 ## What is this for?
 
