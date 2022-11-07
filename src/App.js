@@ -58,11 +58,12 @@ const App = () => {
         );
       }).length > 0;
 
-    if (incomplete) {
-      setFormComplete(false);
-    } else {
-      setFormComplete(true);
-    }
+    // if (incomplete) {
+    //   setFormComplete(false);
+    // } else {
+    //   setFormComplete(true);
+    // }
+    setFormComplete(!incomplete);
   };
 
   const debouncedInput = debounce(handleTaskInput, 300);
